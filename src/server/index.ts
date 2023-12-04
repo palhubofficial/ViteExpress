@@ -1,5 +1,4 @@
 import express from 'express';
-import { exec } from 'node:child_process'
 export const app = express();
 const startTime = Date.now()
 app.get('/api/test', (req, res) => {
@@ -9,18 +8,6 @@ app.get('/api/test', (req, res) => {
   })
   // res.send(`Vite + Express!\nUptime: ${formatTime(Date.now() - startTime)}`)
 })
-
-function gitPull() {
-  exec('git pull', (err, output) => {
-    if (err) {
-      console.error(formatTime(Date.now() - startTime), ' - ', "could not execute command: ", err)
-      return
-    }
-    console.log(formatTime(Date.now() - startTime), ' - ', "Output: \n", output)
-  })
-}
-
-setInterval(gitPull, 1e3 * 10)
 
 function formatTime(milliseconds: number): string {
   let seconds = Math.floor(milliseconds / 1000)
