@@ -4,7 +4,10 @@ export default function App() {
   return (
     <main>
       <h1>Vite + Express</h1>
-      <p>Express API: https://viteexpress.palhub.repl.co/api/test</p>
+      <p>
+        Express API:
+        <a href="https://viteexpress.palhub.repl.co/api/test">viteexpress.palhub.repl.co/api/test</a>
+      </p>
     </main>
   )
 }
