@@ -5,8 +5,6 @@
   "description": "React TypeScript on Replit, using Vite bundler",
   "scripts": {
     "dev": "vite",
-    "git-pull": "tsx watch ./scripts/git-pull.ts",
-    "dev0": "concurrently \"npm run git-pull\" \"npm run vite\"",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
